@@ -25,11 +25,8 @@ import javax.swing.JOptionPane;
  */
 public class Herramientas {
     
-    
-    public static ArrayList<Item> instancias;
-    
-    public static void leerDatos(){
-        instancias = new ArrayList<>();
+    public static ArrayList<Item> leerDatos(){
+     ArrayList<Item> instancias = new ArrayList<>();
      String texto, aux;
      LinkedList<String> lista = new LinkedList();
         
@@ -78,7 +75,7 @@ public class Herramientas {
             
         }
        
-       
+       return instancias;
      
     }
     
@@ -111,21 +108,14 @@ public class Herramientas {
         
     }
     
-    public static void generarArticulos(int n, int limC, int limB) {
+    public static ArrayList<Item> generarArticulos(int n, int limC, int limB) {
         Random ran = new Random();
-        instancias = new ArrayList<>();
-        for(int i=0; i<n; i++){
-            instancias.add(new Item(ran.nextInt(limC), ran.nextInt(limB)));
-        }
-    }
-    
-    public String getInstancias(){
-        String aux="";
+        ArrayList<Item> instancias = new ArrayList<>();
         
-        for(int i=0; i<this.instancias.size(); i++){
-            aux+="Item: "+(i+1)+" \tCosto: "+this.instancias.get(i).getCosto()+"\tBeneficio: "+this.instancias.get(i).getBeneficio()+"\n";
+        for(int i=0; i<n; i++){
+            instancias.add(new Item(ran.nextInt(limC)+1, ran.nextInt(limB)+1));
         }
-        return aux;
+        return instancias;
     }
     
 }
