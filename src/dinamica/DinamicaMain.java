@@ -16,7 +16,7 @@ import ordenamiento.Grafica;
  */
 public class DinamicaMain {
     public static void main(String args[]){
-        // FIBONACCIS
+    //FIBONACCIS
 //        int n = 50;
 //        double t1 [] = new double[n];
 //        double t2 [] = new double[n];
@@ -37,10 +37,22 @@ public class DinamicaMain {
 //        g.agregarSerie(t4, "fDinamicoRecursivo");
 //        g.crearMostrarGrafica();
 
-    Mochila m = new Mochila(20);
-    ArrayList<Item> items = new ArrayList<>();
-    items = Herramientas.generarArticulos(10, 20, 100);
-    m.buscarSolucion(items);
-    System.out.println(m);
+    //PROBLEMA TSP
+        int [][] caminos = new int[][]{
+            {0,     10,     8,      3},
+            {10,    0,      1,      9},
+            {8,     1,      0,      7},
+            {3,     9,      7,      0}
+        };
+        TSP tsp = new TSP(caminos, 1);
+        tsp.buscarSolucion();
+        //System.out.println(tsp);
+
+    //PROBLEMA DE LA MOCHILA
+//        Mochila m = new Mochila(20);
+//        ArrayList<Item> items = new ArrayList<>();
+//        items = Herramientas.generarArticulos(10, 20, 100);
+//        m.buscarSolucion(items);
+//        System.out.println(m);
     }
 }
