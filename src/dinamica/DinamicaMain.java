@@ -38,6 +38,14 @@ public class DinamicaMain {
 //        g.crearMostrarGrafica();
 
     //PROBLEMA TSP
+//        int [][] caminos = new int[][]{
+//            {0,        1,    100,      100,      100},
+//            {100,      0,    100,      100,      1},
+//            {100,    100,      0,        1,      100},
+//            {1,      100,    100,        0,      100},
+//            {100,    100,      1,      100,        0}
+//        };
+//        TSP tsp = new TSP(caminos, 2);
         int [][] caminos = new int[][]{
             {0,     10,     8,      3},
             {10,    0,      1,      9},
@@ -49,9 +57,9 @@ public class DinamicaMain {
         //System.out.println(tsp);
 
     //PROBLEMA DE LA MOCHILA
-//        Mochila m = new Mochila(20);
+//        Mochila m = new Mochila(2);
 //        ArrayList<Item> items = new ArrayList<>();
-//        items = Herramientas.generarArticulos(10, 20, 100);
+//        items = Herramientas.generarArticulos(10000, 1000, 10);
 //        m.buscarSolucion(items);
 //        System.out.println(m);
     }
